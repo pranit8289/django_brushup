@@ -2,9 +2,9 @@ import requests
 
 endpoint = "http://localhost:8000/api/products/"
 data = {
-    "title": "Baby Toy keys",
-    "price": 1.55,
-    "title": "keys for the babies to chew"
+    "title": "Baby Showrma",
+    "price": 7.55,
+    "title": "Baby Showrma for baby to play around"
 }
 response_obj = requests.post(endpoint, json=data)
 
