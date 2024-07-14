@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 
 
 from products.models import Products
-from products.serializers import ProcustSerializer
+from products.serializers import ProductsSerializer
 
 # @api_view(["GET"])
 # def apihome(request, *args, **kwargs):
@@ -16,7 +16,7 @@ from products.serializers import ProcustSerializer
 #     model_data = Products.objects.all().order_by("?").first()
 #     data = {}
 #     if model_data:
-#         data = ProcustSerializer(model_data).data
+#         data = ProductsSerializer(model_data).data
 #     return Response(data)
 
 
@@ -25,7 +25,7 @@ def apihome(request, *args, **kwargs):
     """
     DRF API View
     """
-    serializer = ProcustSerializer(data=request.data)
+    serializer = ProductsSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         instance = serializer.save()
         print(f"[INFO] instance - {instance}")

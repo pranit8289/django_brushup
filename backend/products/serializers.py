@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Products
 
-class ProcustSerializer(serializers.ModelSerializer):
+class ProductsSerializer(serializers.ModelSerializer):
 
     my_discount = serializers.SerializerMethodField(read_only=True)
     class Meta:
